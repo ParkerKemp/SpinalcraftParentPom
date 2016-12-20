@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.spinalcraft</groupId>
   <artifactId>SpinalcraftParentPom</artifactId>
-  <version>SNAPSHOT_${maven.build.timestamp}</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>${project.artifactId}</name>
   <packaging>pom</packaging>
   
@@ -43,6 +43,7 @@
   </dependencies>
 
   <build>
+  	<finalName>${project.artifactId}_${project.version}_${maven.build.timestamp}</finalName>
     <extensions>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
