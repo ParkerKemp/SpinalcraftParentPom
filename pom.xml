@@ -4,13 +4,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.spinalcraft</groupId>
   <artifactId>SpinalcraftParentPom</artifactId>
-  <version>1.0.0</version>
+  <version>SNAPSHOT_${maven.build.timestamp}</version>
   <name>${project.artifactId}</name>
   <packaging>pom</packaging>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.javadoc.skip>true</maven.javadoc.skip>
+    <maven.build.timestamp.format>yyMMdd-HHmm</maven.build.timestamp.format>
   </properties>
   
   <url>http://github.com/ParkerKemp/${project.name}</url>
@@ -19,13 +20,10 @@
       <id>spigot-repo</id>
       <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
     </repository>
+    
     <repository>
       <id>spinalcraft-repo</id>
       <url>http://maven.spinalcraft.com</url>
-    </repository>
-    <repository>
-      <id>sk89q-repo</id>
-      <url>http://maven.sk89q.com/repo/</url>
     </repository>
   </repositories>
   <dependencies>
@@ -35,6 +33,7 @@
       <version>1.9.2-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
+    
     <dependency>
       <groupId>com.spinalcraft</groupId>
       <artifactId>Skull</artifactId>
